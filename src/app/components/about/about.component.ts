@@ -26,7 +26,7 @@ export class AboutComponent implements OnInit {
     this.getPokemon;
   }
 
-  get getPokemon(){
+getPokemon(){
     const id = this.activatedRoute.snapshot.params['id']
     const pokemon = this.mainService.apiGetPokemons(`${this.urlPokemon}/${id}`);
     const name = this.mainService.apiGetPokemons(`${this.urlName}/${id}`);
